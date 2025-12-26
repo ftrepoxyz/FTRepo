@@ -1,46 +1,5 @@
 {
   "name": "FTRepo",
   "identifier": "xyz.ftrepo",
-  "apps": [
-    {
-      "name": "Coin ID: Coin Value Identifier",
-      "bundleIdentifier": "com.aiby.wtcoin",
-      "developerName": "@blatants",
-      "iconURL": "https://is1-ssl.mzstatic.com/image/thumb/Purple221/v4/25/38/a4/2538a405-bfc7-5f4a-f18b-da7dd4155ea5/AppIcon_default-0-0-1x_U007ephone-0-1-85-220.png/512x512bb.jpg",
-      "localizedDescription": "from @blatants |\n----------------\n📱 Coin ID: Coin Value Identifier\n\n🆔 Bundle ID: com.aiby.wtcoin\n⬆️ Updated to: 1.21\n🔧 Minimum iOS: 16.0\n✅ Patched\n💎 Modifier: Subscription Unlocked\n🔄 Tweaked by @blatants\n\nKo-Fi ☕️ | Crypto 👾 | IPAs 📥",
-      "versions": [
-        {
-          "version": "1.21",
-          "date": "2025-12-26T22:25:55Z",
-          "size": 45478622,
-          "downloadURL": "https://github.com/ftrepoxyz/FTRepo/releases/download/latest/Coin_ID_Coin_Value_Identifier_v1_21_Subscription_Unlocked_blatant.ipa"
-        }
-      ],
-      "appPermissions": {},
-      "version": "1.21",
-      "versionDate": "2025-12-26T22:25:55Z",
-      "size": 45478622,
-      "downloadURL": "https://github.com/ftrepoxyz/FTRepo/releases/download/latest/Coin_ID_Coin_Value_Identifier_v1_21_Subscription_Unlocked_blatant.ipa"
-    },
-    {
-      "name": "Sketchar",
-      "bundleIdentifier": "tech.sketchar.ios",
-      "developerName": "@blatants",
-      "iconURL": "https://is1-ssl.mzstatic.com/image/thumb/Purple211/v4/34/f6/5c/34f65ca4-a064-deac-6726-7ca6bc05d999/sketchar-0-0-1x_U007epad-0-1-0-0-sRGB-85-220.png/512x512bb.jpg",
-      "localizedDescription": "from @blatants |\n----------------\n📱 Sketchar: AR Drawing App\n\n🆔 Bundle ID: tech.sketchar.ios\n⬆️ Updated to: 10.3\n🔧 Minimum iOS: 16.0\n✅ Patched\n💎 Modifier: Subscription Unlocked\n🔄 Tweaked by @blatants\n\nKo-Fi ☕️ | Crypto 👾 | IPAs 📥",
-      "versions": [
-        {
-          "version": "10.3",
-          "date": "2025-12-26T22:26:05Z",
-          "size": 196118589,
-          "downloadURL": "https://github.com/ftrepoxyz/FTRepo/releases/download/latest/Sketchar_AR_Drawing_App_v10_3_Subscription_Unlocked_blatant_Patched.ipa"
-        }
-      ],
-      "appPermissions": {},
-      "version": "10.3",
-      "versionDate": "2025-12-26T22:26:05Z",
-      "size": 196118589,
-      "downloadURL": "https://github.com/ftrepoxyz/FTRepo/releases/download/latest/Sketchar_AR_Drawing_App_v10_3_Subscription_Unlocked_blatant_Patched.ipa"
-    }
-  ]
+  "apps": []
 }
