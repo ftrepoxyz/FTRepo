@@ -1153,7 +1153,7 @@ async def download_ipas():
                 if len(topics) == 0:
                     # No topics found (or not available), scan main channel
                     print(f"[FORUM] Scanning main channel for IPAs...")
-                    await scrape_channel_or_topic(client, entity, downloaded_files, name, release_assets, source_metadata, existing_apps_dict)
+                    await scrape_channel_or_topic(client, entity, downloaded_files, channel, release_assets, {'channel': channel}, existing_apps_dict)
                 else:
                     # Process each IPA topic
                     ipa_topics = []
