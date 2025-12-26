@@ -792,6 +792,7 @@ def upload_to_release(file_path, bundle_id=None, tweak_name=None, old_filename=N
 
         # Upload the file (GitHub requires uploads.github.com and Content-Type header)
         upload_url = f"https://uploads.github.com/repos/{owner}/{repo}/releases/{release_id}/assets"
+        encoded_filename = quote(filename)
         result = subprocess.run(
             ['curl', '-s', '-X', 'POST',
              '-H', f'Authorization: token {GITHUB_TOKEN}' if GITHUB_TOKEN else '',
