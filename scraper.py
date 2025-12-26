@@ -1864,9 +1864,8 @@ async def update_repo_json(source_tracking=None):
 
             # Upload to release
             if upload_to_release(src_path, bundle_id=bundle_id_value, tweak_name=tweak_value, old_filename=old_filename_value):
-                # Construct download URL from release (URL-encode the filename)
-                encoded_filename = quote(filename)
-                download_url = f"{repo_url}/releases/download/{RELEASE_TAG}/{encoded_filename}"
+                # Construct download URL from release (GitHub release downloads don't need URL encoding)
+                download_url = f"{repo_url}/releases/download/{RELEASE_TAG}/{filename}"
 
                 # Search App Store for official name, icon, and bundle ID
                 # Only search if we have com.unknown or if cache check suggests we need to
