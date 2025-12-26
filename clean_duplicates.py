@@ -94,7 +94,11 @@ def get_repo_info():
                 host = remote_url.split('@')[1].split(':')[0]
                 base_url = f'https://{host}'
 
-            api_url = f'{base_url}/api/v3'
+            # GitHub uses api.github.com, not github.com/api/v3
+            if 'github.com' in base_url:
+                api_url = 'https://api.github.com'
+            else:
+                api_url = f'{base_url}/api/v1'
             return owner, repo, api_url, base_url
 
         return None, None, None, None
