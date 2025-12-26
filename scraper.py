@@ -786,13 +786,13 @@ def upload_to_release(file_path, bundle_id=None, tweak_name=None, old_filename=N
                     check=False
                 )
 
-        # Upload the file (URL-encode the filename to handle special characters)
-        upload_url = f"{api_url}/repos/{owner}/{repo}/releases/{release_id}/assets"
-        encoded_filename = quote(filename)
+        # Upload the file (GitHub requires uploads.github.com and Content-Type header)
+        upload_url = f"https://uploads.github.com/repos/{owner}/{repo}/releases/{release_id}/assets"
         result = subprocess.run(
             ['curl', '-s', '-X', 'POST',
              '-H', f'Authorization: token {GITHUB_TOKEN}' if GITHUB_TOKEN else '',
-             '-F', f'attachment=@{file_path}',
+             '-H', 'Content-Type: application/octet-stream',
+             '--data-binary', f'@{file_path}',
              f'{upload_url}?name={encoded_filename}'],
             capture_output=True,
             text=True,
