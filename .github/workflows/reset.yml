@@ -12,11 +12,11 @@ jobs:
         uses: actions/checkout@v3
         with:
           fetch-depth: 0
-          token: ${{ secrets.GITH_TOKEN }}
+          token: ${{ secrets.GITHUB_TOKEN }}
 
       - name: Delete all release assets
         env:
-          GITH_TOKEN: ${{ secrets.GITH_TOKEN }}
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
         run: |
           echo "========================================"
           echo "DELETING ALL RELEASE ASSETS"
@@ -48,7 +48,7 @@ jobs:
           # Get the 'latest' release
           echo ""
           echo "Fetching 'latest' release..."
-          RELEASE_JSON=$(curl -s -H "Authorization: token $GITH_TOKEN" \
+          RELEASE_JSON=$(curl -s -H "Authorization: token $GITHUB_TOKEN" \
             "${GITHUB_API_URL}/repos/${OWNER}/${REPO}/releases/tags/latest")
 
           RELEASE_ID=$(echo "$RELEASE_JSON" | grep -o '"id":[0-9]*' | head -1 | grep -o '[0-9]*')
@@ -61,7 +61,7 @@ jobs:
             # Get all assets
             echo ""
             echo "Fetching all assets from release..."
-            ASSETS_JSON=$(curl -s -H "Authorization: token $GITH_TOKEN" \
+            ASSETS_JSON=$(curl -s -H "Authorization: token $GITHUB_TOKEN" \
               "${GITHUB_API_URL}/repos/${OWNER}/${REPO}/releases/${RELEASE_ID}/assets")
 
             # Count assets
@@ -74,7 +74,7 @@ jobs:
                 if [ -n "$ASSET_ID" ]; then
                   echo "  Deleting asset ID: $ASSET_ID"
                   curl -s -X DELETE \
-                    -H "Authorization: token $GITH_TOKEN" \
+                    -H "Authorization: token $GITHUB_TOKEN" \
                     "${GITHUB_API_URL}/repos/${OWNER}/${REPO}/releases/${RELEASE_ID}/assets/${ASSET_ID}"
                 fi
               done

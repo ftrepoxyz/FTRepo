@@ -24,7 +24,7 @@ DOWNLOAD_DIR = 'downloads'
 ICONS_DIR = 'icons'
 REPO_FILE = 'apps.json'
 RELEASE_TAG = 'latest'
-GITH_TOKEN = os.getenv('GITH_TOKEN', '')
+GITHUB_TOKEN = os.getenv('GITHUB_TOKEN', '')
 GITHUB_API_URL = os.getenv('GITHUB_API_URL', 'https://api.github.com')
 REPO_OWNER = os.getenv('REPO_OWNER', '')
 REPO_NAME = os.getenv('REPO_NAME', '')
@@ -635,11 +635,11 @@ def get_release_assets():
         # GitHub API: GET /repos/{owner}/{repo}/releases/tags/{tag}
         url = f"{api_url}/repos/{owner}/{repo}/releases/tags/{RELEASE_TAG}"
         headers = {}
-        if GITH_TOKEN:
-            headers['Authorization'] = f'token {GITH_TOKEN}'
+        if GITHUB_TOKEN:
+            headers['Authorization'] = f'token {GITHUB_TOKEN}'
 
         result = subprocess.run(
-            ['curl', '-s', '-H', f'Authorization: token {GITH_TOKEN}' if GITH_TOKEN else '', url],
+            ['curl', '-s', '-H', f'Authorization: token {GITHUB_TOKEN}' if GITHUB_TOKEN else '', url],
             capture_output=True,
             text=True,
             check=False
@@ -681,7 +681,7 @@ def ensure_release_exists():
         # Check if release exists
         url = f"{api_url}/repos/{owner}/{repo}/releases/tags/{RELEASE_TAG}"
         result = subprocess.run(
-            ['curl', '-s', '-H', f'Authorization: token {GITH_TOKEN}' if GITH_TOKEN else '', url],
+            ['curl', '-s', '-H', f'Authorization: token {GITHUB_TOKEN}' if GITHUB_TOKEN else '', url],
             capture_output=True,
             text=True,
             check=False
@@ -709,7 +709,7 @@ def ensure_release_exists():
         result = subprocess.run(
             ['curl', '-s', '-X', 'POST',
              '-H', 'Content-Type: application/json',
-             '-H', f'Authorization: token {GITH_TOKEN}' if GITH_TOKEN else '',
+             '-H', f'Authorization: token {GITHUB_TOKEN}' if GITHUB_TOKEN else '',
              '-d', json.dumps(payload),
              create_url],
             capture_output=True,
@@ -748,7 +748,7 @@ def upload_to_release(file_path, bundle_id=None, tweak_name=None, old_filename=N
         # First, get the release ID
         url = f"{api_url}/repos/{owner}/{repo}/releases/tags/{RELEASE_TAG}"
         result = subprocess.run(
-            ['curl', '-s', '-H', f'Authorization: token {GITH_TOKEN}' if GITH_TOKEN else '', url],
+            ['curl', '-s', '-H', f'Authorization: token {GITHUB_TOKEN}' if GITHUB_TOKEN else '', url],
             capture_output=True,
             text=True,
             check=False
@@ -770,7 +770,7 @@ def upload_to_release(file_path, bundle_id=None, tweak_name=None, old_filename=N
                 delete_url = f"{api_url}/repos/{owner}/{repo}/releases/{release_id}/assets/{asset['id']}"
                 subprocess.run(
                     ['curl', '-s', '-X', 'DELETE',
-                     '-H', f'Authorization: token {GITH_TOKEN}' if GITH_TOKEN else '',
+                     '-H', f'Authorization: token {GITHUB_TOKEN}' if GITHUB_TOKEN else '',
                      delete_url],
                     capture_output=True,
                     check=False
@@ -780,7 +780,7 @@ def upload_to_release(file_path, bundle_id=None, tweak_name=None, old_filename=N
                 delete_url = f"{api_url}/repos/{owner}/{repo}/releases/{release_id}/assets/{asset['id']}"
                 subprocess.run(
                     ['curl', '-s', '-X', 'DELETE',
-                     '-H', f'Authorization: token {GITH_TOKEN}' if GITH_TOKEN else '',
+                     '-H', f'Authorization: token {GITHUB_TOKEN}' if GITHUB_TOKEN else '',
                      delete_url],
                     capture_output=True,
                     check=False
@@ -791,7 +791,7 @@ def upload_to_release(file_path, bundle_id=None, tweak_name=None, old_filename=N
         encoded_filename = quote(filename)
         result = subprocess.run(
             ['curl', '-s', '-X', 'POST',
-             '-H', f'Authorization: token {GITH_TOKEN}' if GITH_TOKEN else '',
+             '-H', f'Authorization: token {GITHUB_TOKEN}' if GITHUB_TOKEN else '',
              '-F', f'attachment=@{file_path}',
              f'{upload_url}?name={encoded_filename}'],
             capture_output=True,

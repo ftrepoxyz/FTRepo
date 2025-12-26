@@ -33,7 +33,7 @@ REPO_FILE = 'apps.json'
 TWEAKS_LIST_FILE = 'tweaks_list.json'
 OPENROUTER_API_KEY = os.getenv('OPENROUTER_API_KEY', '')
 OPENROUTER_MODEL = os.getenv('OPENROUTER_MODEL', 'openai/gpt-4o-mini')
-GITH_TOKEN = os.getenv('GITH_TOKEN', '')
+GITHUB_TOKEN = os.getenv('GITHUB_TOKEN', '')
 RELEASE_TAG = 'latest'
 
 # Cache for AI duplicate detection
@@ -115,7 +115,7 @@ def get_release_assets():
         url = f"{api_url}/repos/{owner}/{repo}/releases/tags/{RELEASE_TAG}"
 
         result = subprocess.run(
-            ['curl', '-s', '-H', f'Authorization: token {GITH_TOKEN}' if GITH_TOKEN else '', url],
+            ['curl', '-s', '-H', f'Authorization: token {GITHUB_TOKEN}' if GITHUB_TOKEN else '', url],
             capture_output=True,
             text=True,
             check=False
@@ -160,7 +160,7 @@ def delete_release_asset(asset_id, asset_name):
         # Get release ID first
         url = f"{api_url}/repos/{owner}/{repo}/releases/tags/{RELEASE_TAG}"
         result = subprocess.run(
-            ['curl', '-s', '-H', f'Authorization: token {GITH_TOKEN}' if GITH_TOKEN else '', url],
+            ['curl', '-s', '-H', f'Authorization: token {GITHUB_TOKEN}' if GITHUB_TOKEN else '', url],
             capture_output=True,
             text=True,
             check=False
@@ -176,7 +176,7 @@ def delete_release_asset(asset_id, asset_name):
         delete_url = f"{api_url}/repos/{owner}/{repo}/releases/{release_id}/assets/{asset_id}"
         result = subprocess.run(
             ['curl', '-s', '-X', 'DELETE',
-             '-H', f'Authorization: token {GITH_TOKEN}' if GITH_TOKEN else '',
+             '-H', f'Authorization: token {GITHUB_TOKEN}' if GITHUB_TOKEN else '',
              delete_url],
             capture_output=True,
             text=True,
