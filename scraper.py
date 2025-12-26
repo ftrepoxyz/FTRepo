@@ -791,13 +791,14 @@ def upload_to_release(file_path, bundle_id=None, tweak_name=None, old_filename=N
                 )
 
         # Upload the file (GitHub requires uploads.github.com and Content-Type header)
+        # URL-encode filename to handle special characters like &, spaces, etc.
         upload_url = f"https://uploads.github.com/repos/{owner}/{repo}/releases/{release_id}/assets"
         result = subprocess.run(
             ['curl', '-s', '-X', 'POST',
              '-H', f'Authorization: token {GITHUB_TOKEN}' if GITHUB_TOKEN else '',
              '-H', 'Content-Type: application/octet-stream',
              '--data-binary', f'@{file_path}',
-             f'{upload_url}?name={filename}'],
+             f'{upload_url}?name={quote(filename, safe="")}'],
             capture_output=True,
             text=True,
             check=False
@@ -1863,8 +1864,8 @@ async def update_repo_json(source_tracking=None):
 
             # Upload to release
             if upload_to_release(src_path, bundle_id=bundle_id_value, tweak_name=tweak_value, old_filename=old_filename_value):
-                # Construct download URL from release (use exact filename as stored on GitHub)
-                download_url = f"{repo_url}/releases/download/{RELEASE_TAG}/{filename}"
+                # Construct download URL from release (use URL-encoded filename to match what GitHub stores)
+                download_url = f"{repo_url}/releases/download/{RELEASE_TAG}/{quote(filename, safe='')}"
 
                 # Search App Store for official name, icon, and bundle ID
                 # Only search if we have com.unknown or if cache check suggests we need to
