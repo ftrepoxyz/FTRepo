@@ -23,26 +23,6 @@
       "downloadURL": "https://github.com/ftrepoxyz/FTRepo/releases/download/latest/Coin_ID_Coin_Value_Identifier_v1_21_Subscription_Unlocked_blatant.ipa"
     },
     {
-      "name": "咔皮Action",
-      "bundleIdentifier": "com.future.kapi",
-      "developerName": "@blatants",
-      "iconURL": "https://is1-ssl.mzstatic.com/image/thumb/Purple211/v4/20/23/da/2023da70-830c-46d9-d7f2-d1e866002529/AppIcon-0-0-1x_U007emarketing-0-11-0-0-85-220.png/512x512bb.jpg",
-      "localizedDescription": "from @blatants |\n----------------\n📱 Kapi Cam - Y2K & CCD Camera\n\n🆔 Bundle ID: com.future.kapi\n⬆️ Updated to: 3.31.1\n🔧 Minimum iOS: 12.0\n✅ Patched\n💎 Modifier: Subscription Unlocked\n🔄 Tweaked by @blatants\n\n📝 Note:\nJust close the purchase pages if you see any and restart the app.\n\nKo-Fi ☕️ | Crypto 👾 | IPAs 📥",
-      "versions": [
-        {
-          "version": "3.31.1",
-          "date": "2025-12-26T22:25:59Z",
-          "size": 172256788,
-          "downloadURL": "https://github.com/ftrepoxyz/FTRepo/releases/download/latest/Kapi_Cam_Y2K_%26_CCD_Camera_v3_31_1_Subscription_Unlocked_blatant.ipa"
-        }
-      ],
-      "appPermissions": {},
-      "version": "3.31.1",
-      "versionDate": "2025-12-26T22:25:59Z",
-      "size": 172256788,
-      "downloadURL": "https://github.com/ftrepoxyz/FTRepo/releases/download/latest/Kapi_Cam_Y2K_%26_CCD_Camera_v3_31_1_Subscription_Unlocked_blatant.ipa"
-    },
-    {
       "name": "Sketchar",
       "bundleIdentifier": "tech.sketchar.ios",
       "developerName": "@blatants",
