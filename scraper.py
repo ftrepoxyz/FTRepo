@@ -1025,7 +1025,14 @@ async def scrape_channel_or_topic(client, entity, downloaded_files, name, releas
 
 async def get_forum_topics_safe(client, entity):
     try:
-        from telethon.tl.functions.channels import GetForumTopicsRequest
+        # Try to import GetForumTopicsRequest (may not exist in newer Telethon versions)
+        try:
+            from telethon.tl.functions.channels import GetForumTopicsRequest
+        except ImportError:
+            # GetForumTopicsRequest not available in this Telethon version
+            print(f"  [FORUM] Forum topics not supported in this Telethon version")
+            return []
+
         result = await client(GetForumTopicsRequest(channel=entity, offset_date=0, offset_id=0, offset_topic=0, limit=100))
         return result.topics if hasattr(result, 'topics') else []
     except Exception as e:
