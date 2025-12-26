@@ -847,22 +847,37 @@ async def download_single_file(client, message, download_path, filename):
             os.remove(download_path)
         return False
 
-async def scrape_channel_or_topic(client, entity, downloaded_files, name, release_assets, source_metadata=None, existing_apps_dict=None):
+async def scrape_channel_or_topic(client, entity, downloaded_files, name, release_assets, source_metadata=None, existing_apps_dict=None, search_query=None, topic_id=None):
     print(f"\n[CHANNEL] Starting scrape: {name}")
+    if search_query:
+        print(f"[INFO] Using search query: '{search_query}' to find IPAs across all topics")
+    if topic_id:
+        print(f"[INFO] Targeting forum topic ID: {topic_id}")
+    
     print(f"[INFO] Searching for last {MAX_DOWNLOADS_PER_CHANNEL} IPAs total (limit: 200 messages)")
     print(f"[PERF] Parallel downloads: {MAX_CONCURRENT_DOWNLOADS} concurrent")
+    
     if source_metadata is None:
         source_metadata = {}
     if existing_apps_dict is None:
         existing_apps_dict = {}
+    
     try:
         ipa_count = 0
         new_downloads = 0
         messages_scanned = 0
-        download_queue = []  # Queue of (message, filename, message_text) tuples to download
+        download_queue = []
 
-        # First pass: scan messages and collect files to download
-        async for message in client.iter_messages(entity, limit=200):
+        # Iterate through messages
+        # Priority: topic_id (specific topic) > search_query (global search) > regular iteration
+        if topic_id:
+            iterator = client.iter_messages(entity, reply_to=topic_id, limit=200)
+        elif search_query:
+            iterator = client.iter_messages(entity, search=search_query, limit=200)
+        else:
+            iterator = client.iter_messages(entity, limit=200)
+        
+        async for message in iterator:
             messages_scanned += 1
             if messages_scanned % 50 == 0:
                 print(f"[PROGRESS] Scanned {messages_scanned} messages, found {ipa_count} IPAs...")
@@ -1025,17 +1040,23 @@ async def scrape_channel_or_topic(client, entity, downloaded_files, name, releas
 
 async def get_forum_topics_safe(client, entity):
     try:
-        # Try to import GetForumTopicsRequest (may not exist in newer Telethon versions)
-        try:
-            from telethon.tl.functions.channels import GetForumTopicsRequest
-        except ImportError:
-            # GetForumTopicsRequest not available - return None to signal fallback to regular messages
-            return None
-
-        result = await client(GetForumTopicsRequest(channel=entity, offset_date=0, offset_id=0, offset_topic=0, limit=100))
-        return result.topics if hasattr(result, 'topics') else []
+        from telethon import functions
+        
+        # Try to get forum topics using the standard request
+        # Using offset_date=0 and other offsets=0 to get latest topics
+        result = await client(functions.channels.GetForumTopicsRequest(
+            channel=entity,
+            offset_date=0,
+            offset_id=0,
+            offset_topic=0,
+            limit=100
+        ))
+        
+        if hasattr(result, 'topics') and result.topics:
+            return result.topics
+        return []
     except Exception as e:
-        print(f"  Error getting forum topics: {e}")
+        print(f"  [DEBUG] Error getting forum topics: {e}")
         return None
 
 async def download_ipas():
@@ -1143,194 +1164,40 @@ async def download_ipas():
                 print(f"[FORUM] Channel is a forum, searching for IPA topics...")
                 topics = await get_forum_topics_safe(client, entity)
 
-                # If topics couldn't be fetched, fall back to scanning main channel
-                if topics is None:
-                    print(f"[FORUM] Forum topics not available, scanning main channel instead...")
-                    topics = []
-
-                print(f"[FORUM] Found {len(topics)} topics total")
-
-                if len(topics) == 0:
-                    # No topics found (or not available), scan main channel
-                    print(f"[FORUM] Scanning main channel for IPAs...")
-                    await scrape_channel_or_topic(client, entity, downloaded_files, channel, release_assets, {'channel': channel}, existing_apps_dict)
-                else:
-                    # Process each IPA topic
-                    ipa_topics = []
+                # Topics found and filter them
+                ipa_topics = []
+                if topics:
+                    print(f"[FORUM] Found {len(topics)} topics total")
                     for topic in topics:
                         topic_title = topic.title.lower() if hasattr(topic, 'title') else ''
                         topic_title_original = topic.title if hasattr(topic, 'title') else ''
                         if 'ipa' in topic_title or '👀' in topic_title_original or '📁' in topic_title_original:
                             ipa_topics.append(topic)
                             print(f"[TOPIC] Found IPA topic: {topic.title}")
+                else:
+                    if topics is None:
+                        print(f"[FORUM] Error fetching topics, using global search fallback...")
+                    else:
+                        print(f"[FORUM] Found 0 topics total, using global search fallback...")
 
-                print(f"[FORUM] Processing {len(ipa_topics)} IPA topics...")
-
-                for topic_idx, topic in enumerate(ipa_topics, 1):
-                    print(f"\n[TOPIC {topic_idx}/{len(ipa_topics)}] {topic.title}")
-                    # Use the parallel download function for topics too
-                    topic_entity = await client.get_entity(entity.id)
-                    # Create a custom iterator for topic messages
-                    async def topic_scraper():
-                        ipa_count = 0
-                        new_downloads = 0
-                        messages_scanned = 0
-                        download_queue = []
-
-                        print(f"[INFO] Searching for last {MAX_DOWNLOADS_PER_CHANNEL} IPAs total in topic...")
-                        print(f"[PERF] Parallel downloads: {MAX_CONCURRENT_DOWNLOADS} concurrent")
-
-                        async for message in client.iter_messages(entity, reply_to=topic.id, limit=200):
-                            messages_scanned += 1
-                            if messages_scanned % 50 == 0:
-                                print(f"[PROGRESS] Scanned {messages_scanned} messages in topic, found {ipa_count} IPAs...")
-
-                            if message.document:
-                                filename = None
-                                for attr in message.document.attributes:
-                                    if isinstance(attr, DocumentAttributeFilename):
-                                        filename = attr.file_name
-                                        break
-
-                                if filename and filename.endswith('.ipa'):
-                                    ipa_count += 1
-                                    file_size_mb = message.document.size / (1024 * 1024)
-                                    print(f"\n[FOUND] IPA #{ipa_count}: {filename} ({file_size_mb:.2f}MB)")
-
-                                    if ipa_count > MAX_DOWNLOADS_PER_CHANNEL:
-                                        print(f"[INFO] Reached maximum of {MAX_DOWNLOADS_PER_CHANNEL} IPAs total for this topic")
-                                        break
-
-                                    message_text = message.text or message.message or ""
-                                    if message_text:
-                                        message_text = message_text.strip()
-
-                                    if filename in release_assets:
-                                        print(f"  [SKIP] Already exists in '{RELEASE_TAG}' release")
-                                        continue
-
-                                    # *** NEW: Check version against existing apps.json ***
-                                    # Extract version and bundle ID from message/filename before downloading
-                                    if existing_apps_dict:
-                                        # Use AI extraction (mandatory)
-                                        if message_text:
-                                            ai_meta = extract_metadata_with_ai(message_text, filename)
-                                            app_name_msg = ai_meta['app_name']
-                                            version_msg = ai_meta['version']
-                                            tweak_msg = ai_meta['tweak_name']
-                                            bundle_id_from_file = ai_meta['bundle_id']
-                                        else:
-                                            # No message text, skip version check
-                                            app_name_msg = None
-                                            version_msg = None
-                                            tweak_msg = None
-                                            bundle_id_from_file = None
-
-                                        # Extract tweak from filename if AI didn't find one
-                                        tweak_from_file = extract_tweak_name(filename) if not tweak_msg else None
-                                        tweak = tweak_msg or tweak_from_file
-
-                                        # Try to determine version
-                                        # Parse filename for version if not in message
-                                        version_from_file = None
-                                        fname_no_ext = filename.replace('.ipa', '')
-                                        # Try various version patterns
-                                        version_patterns = [
-                                            r'\sv(\d+[\d\._]+)',  # " v1.2.3"
-                                            r'_v(\d+[\d_]+)',      # "_v1_2_3"
-                                            r'\s(\d+\.\d+\.\d+)'   # " 1.2.3"
-                                        ]
-                                        for pattern in version_patterns:
-                                            match = re.search(pattern, fname_no_ext, re.IGNORECASE)
-                                            if match:
-                                                version_from_file = match.group(1).replace('_', '.')
-                                                break
-
-                                        # Determine version to check
-                                        version_to_check = version_msg or version_from_file
-
-                                        if bundle_id_from_file and version_to_check:
-                                            # Create unique key (with tweak if present)
-                                            if tweak:
-                                                check_key = f"{bundle_id_from_file}:{tweak}"
-                                            else:
-                                                check_key = bundle_id_from_file
-
-                                            # Check if this app exists in apps.json
-                                            if check_key in existing_apps_dict:
-                                                existing_version = existing_apps_dict[check_key]
-                                                print(f"  [VERSION CHECK] Found in apps.json: {check_key} v{existing_version}")
-                                                print(f"  [VERSION CHECK] Telegram version: v{version_to_check}")
-
-                                                # Compare versions
-                                                if not compare_versions(version_to_check, existing_version):
-                                                    # Telegram version is NOT newer (either older or equal)
-                                                    print(f"  [SKIP] Telegram version v{version_to_check} is not newer than existing v{existing_version}")
-                                                    continue
-                                                else:
-                                                    print(f"  [NEWER] Telegram version v{version_to_check} is newer than existing v{existing_version}, downloading...")
-                                            else:
-                                                print(f"  [NEW] App not found in apps.json ({check_key}), will download")
-                                        else:
-                                            if not bundle_id_from_file:
-                                                print(f"  [WARNING] Could not extract bundle ID from filename, skipping version check")
-                                            if not version_to_check:
-                                                print(f"  [WARNING] Could not extract version from message/filename, skipping version check")
-
-                                    download_path = os.path.join(DOWNLOAD_DIR, filename)
-
-                                    if not os.path.exists(download_path):
-                                        message_timestamp = message.date.timestamp() if message.date else 0
-                                        download_queue.append((message, filename, message_text, message_timestamp))
-                                        print(f"  [QUEUED] Added to download queue")
-                                    else:
-                                        print(f"  [INFO] Already in downloads folder, will be processed")
-                                        message_timestamp = message.date.timestamp() if message.date else 0
-                                        downloaded_files.append({
-                                            'filename': filename,
-                                            'source': channel,
-                                            'message': message_text,
-                                            'timestamp': message_timestamp
-                                        })
-                                        new_downloads += 1
-
-                        # Download in parallel batches
-                        if download_queue:
-                            print(f"\n[DOWNLOAD] Starting parallel download of {len(download_queue)} files...")
-
-                            for i in range(0, len(download_queue), MAX_CONCURRENT_DOWNLOADS):
-                                batch = download_queue[i:i + MAX_CONCURRENT_DOWNLOADS]
-                                batch_num = i // MAX_CONCURRENT_DOWNLOADS + 1
-                                total_batches = (len(download_queue) - 1) // MAX_CONCURRENT_DOWNLOADS + 1
-
-                                print(f"\n[BATCH {batch_num}/{total_batches}] Downloading {len(batch)} files in parallel...")
-
-                                tasks = []
-                                for message, filename, message_text, message_timestamp in batch:
-                                    download_path = os.path.join(DOWNLOAD_DIR, filename)
-                                    print(f"  [START] {filename}")
-                                    task = download_single_file(client, message, download_path, filename)
-                                    tasks.append((task, filename, message_text, message_timestamp))
-
-                                results = await asyncio.gather(*[task for task, _, _, _ in tasks], return_exceptions=True)
-
-                                for (_, filename, message_text, message_timestamp), result in zip(tasks, results):
-                                    if result is True:
-                                        downloaded_files.append({
-                                            'filename': filename,
-                                            'source': channel,
-                                            'message': message_text,
-                                            'timestamp': message_timestamp
-                                        })
-                                        new_downloads += 1
-                                    elif isinstance(result, Exception):
-                                        print(f"  [ERROR] Exception downloading {filename}: {result}")
-
-                                print(f"[BATCH {batch_num}/{total_batches}] Completed - {new_downloads}/{len(download_queue)} successful")
-
-                        print(f"[TOPIC] Completed: {topic.title} - Scanned {messages_scanned} messages, found {ipa_count} IPAs, downloaded {new_downloads} new files")
-
-                    await topic_scraper()
+                if len(ipa_topics) == 0:
+                    # No IPA-specific topics found, use search across all topics
+                    print(f"[FORUM] Searching all topics for IPAs...")
+                    await scrape_channel_or_topic(client, entity, downloaded_files, channel, release_assets, {'channel': channel}, existing_apps_dict, search_query='.ipa')
+                else:
+                    # Process each identified IPA topic
+                    print(f"[FORUM] Processing {len(ipa_topics)} IPA topics...")
+                    for topic_idx, topic in enumerate(ipa_topics, 1):
+                        print(f"\n[TOPIC {topic_idx}/{len(ipa_topics)}] {topic.title}")
+                        # Scraping a specific topic is like scraping a channel but with reply_to
+                        # We use scrape_channel_or_topic with a custom iterator or just handle it here
+                        # To keep it simple and reuse parallel logic, let's call it for the topic
+                        # But wait, scrape_channel_or_topic needs a way to take topic.id
+                        # I'll add a reply_to_id parameter to scrape_channel_or_topic
+                        await scrape_channel_or_topic(client, entity, downloaded_files, f"{channel} ({topic.title})", release_assets, {'channel': channel}, existing_apps_dict, topic_id=topic.id)
+            else:
+                print(f"[INFO] Channel is a regular channel (not a forum)")
+                await scrape_channel_or_topic(client, entity, downloaded_files, channel, release_assets, {'channel': channel}, existing_apps_dict)
             else:
                 print(f"[INFO] Channel is a regular channel (not a forum)")
                 await scrape_channel_or_topic(client, entity, downloaded_files, channel, release_assets, {'channel': channel}, existing_apps_dict)
