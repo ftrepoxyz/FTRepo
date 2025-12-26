@@ -1,6 +1,109 @@
 {
   "name": "FTRepo",
   "identifier": "xyz.ftrepo",
-  "apps": [],
+  "apps": [
+    {
+      "name": "RustMobile",
+      "bundleIdentifier": "com.tencent.rmos",
+      "developerName": "@glesign",
+      "localizedDescription": "from @glesign |\n---------------\nRust Mobile v1.32.1 Beta\n\n🇷🇺 Легендарный шутер от Facepunch теперь на iOS и находится в  закрытом тестирование\n— Приложение из TestFlight\n— Требуется iOS 15.0+\n— Для игры после начала тестирования вам нужен будет аккаунт Level Infinite с доступом к ЗБТ\n© Создано: GLESign\n\n🇺🇸 The legendary shooter from Facepunch is now on iOS and is in closed testing\n— The app from TestFlight\n— Requires iOS 15.0+\n— To play after the start of testing, you will need a Level Infinite account with access to the CBT\n© Created: GLESign",
+      "iconURL": "https://is1-ssl.mzstatic.com/image/thumb/Purple211/v4/2a/31/6d/2a316dd4-e2d6-cd4d-ab89-12adc3e97cfe/AppIcon-0-0-1x_U007epad-0-85-220.png/512x512bb.jpg",
+      "versions": [
+        {
+          "version": "1.32.1",
+          "date": "2025-12-26T19:29:19Z",
+          "size": 545176546,
+          "downloadURL": "https://github.com/ftrepoxyz/FTRepo/releases/download/latest/RustMobile%20v1.32.1%5Btg%40glesign%5D.ipa",
+          "buildVersion": "1.32.1"
+        }
+      ],
+      "appPermissions": {}
+    },
+    {
+      "name": "Hentasis",
+      "bundleIdentifier": "com.hentasis.app",
+      "developerName": "@glesign",
+      "localizedDescription": "from @glesign |\n---------------\nHentasis v1.0.0\n\n🇷🇺 Приложение для просмотра +18 контента с сайта Hentasis — Требуется iOS 15.0+ — Изменения: ссылка\n© Создано: Hentasis iOS\n\n🇺🇸 An application for viewing 18+ content from the Hentasis website — Requires iOS 15.0+ — Changes: link\n© Created: Hentasis iOS",
+      "iconURL": "https://is1-ssl.mzstatic.com/image/thumb/Purple211/v4/5c/08/ed/5c08ed55-6bc0-0b01-78af-4c78eec9f5c6/AppIcon-0-0-1x_U007ephone-0-1-85-220.png/512x512bb.jpg",
+      "versions": [
+        {
+          "version": "1.0.0",
+          "date": "2025-12-26T19:29:21Z",
+          "size": 3711554,
+          "downloadURL": "https://github.com/ftrepoxyz/FTRepo/releases/download/latest/Hentasis%20v1.0.0%5Btg%40glesign%5D.ipa",
+          "buildVersion": "1.0.0"
+        }
+      ],
+      "appPermissions": {}
+    },
+    {
+      "name": "Coin ID: Coin Value Identifier",
+      "bundleIdentifier": "com.aiby.wtcoin",
+      "developerName": "@blatants",
+      "localizedDescription": "from @blatants |\n----------------\n📱 Coin ID: Coin Value Identifier\n\n🆔 Bundle ID: com.aiby.wtcoin\n⬆️ Updated to: 1.21\n🔧 Minimum iOS: 16.0\n✅ Patched\n💎 Modifier: Subscription Unlocked\n🔄 Tweaked by @blatants\n\nKo-Fi ☕️ | Crypto 👾 | IPAs 📥",
+      "iconURL": "https://is1-ssl.mzstatic.com/image/thumb/Purple221/v4/25/38/a4/2538a405-bfc7-5f4a-f18b-da7dd4155ea5/AppIcon_default-0-0-1x_U007ephone-0-1-85-220.png/512x512bb.jpg",
+      "versions": [
+        {
+          "version": "1.21",
+          "date": "2025-12-26T19:29:24Z",
+          "size": 45478622,
+          "downloadURL": "https://github.com/ftrepoxyz/FTRepo/releases/download/latest/Coin_ID_Coin_Value_Identifier_v1_21_Subscription_Unlocked_blatant.ipa",
+          "buildVersion": "1.21"
+        }
+      ],
+      "appPermissions": {}
+    },
+    {
+      "name": "咔皮Action",
+      "bundleIdentifier": "com.future.kapi",
+      "developerName": "@blatants",
+      "localizedDescription": "from @blatants |\n----------------\n📱 Kapi Cam - Y2K & CCD Camera\n\n🆔 Bundle ID: com.future.kapi\n⬆️ Updated to: 3.31.1\n🔧 Minimum iOS: 12.0\n✅ Patched\n💎 Modifier: Subscription Unlocked\n🔄 Tweaked by @blatants\n\n📝 Note:\nJust close the purchase pages if you see any and restart the app.\n\nKo-Fi ☕️ | Crypto 👾 | IPAs 📥",
+      "iconURL": "https://is1-ssl.mzstatic.com/image/thumb/Purple211/v4/20/23/da/2023da70-830c-46d9-d7f2-d1e866002529/AppIcon-0-0-1x_U007emarketing-0-11-0-0-85-220.png/512x512bb.jpg",
+      "versions": [
+        {
+          "version": "3.31.1",
+          "date": "2025-12-26T19:29:32Z",
+          "size": 172256788,
+          "downloadURL": "https://github.com/ftrepoxyz/FTRepo/releases/download/latest/Kapi_Cam_Y2K_%26_CCD_Camera_v3_31_1_Subscription_Unlocked_blatant.ipa",
+          "buildVersion": "3.31.1"
+        }
+      ],
+      "appPermissions": {}
+    },
+    {
+      "name": "Tiny Bunny",
+      "bundleIdentifier": "com.GLESign.TinyBunny",
+      "developerName": "@glesign",
+      "localizedDescription": "from @glesign |\n---------------\nTiny Bunny v4.5 | 4 Episodes\n\n🇷🇺 Погрузись в жуткую сказку на iOS!\n— Портировано на iOS\n— Требуется iOS 15.0+\n— Для открытия паузы проведите пальцем вверх\n— Для скрытия бара субтитров проведите пальцем вниз\n© Создано: GLESign\n\n🇺🇸 Immerse yourself in a creepy fairy tale on iOS!\n— Ported to iOS\n— Requires iOS 15.0+\n— Swipe up to open the pause\n— Swipe down to hide the subtitle bar\n© Created: GLESign",
+      "iconURL": "https://is1-ssl.mzstatic.com/image/thumb/Purple211/v4/38/90/40/38904001-c293-f462-5df5-8345bbd8fcfd/AppIcon-0-0-1x_U007emarketing-0-8-0-85-220.png/512x512bb.jpg",
+      "versions": [
+        {
+          "version": "4.5",
+          "date": "2025-12-26T19:30:03Z",
+          "size": 1006047355,
+          "downloadURL": "https://github.com/ftrepoxyz/FTRepo/releases/download/latest/Tiny%20Bunny%20v4.5%5Btg%40glesign%5D.ipa",
+          "buildVersion": "4.5"
+        }
+      ],
+      "appPermissions": {}
+    },
+    {
+      "name": "Sketchar: AR Drawing App",
+      "bundleIdentifier": "tech.sketchar.ios",
+      "developerName": "@blatants",
+      "localizedDescription": "from @blatants |\n----------------\n📱 Sketchar: AR Drawing App\n\n🆔 Bundle ID: tech.sketchar.ios\n⬆️ Updated to: 10.3\n🔧 Minimum iOS: 16.0\n✅ Patched\n💎 Modifier: Subscription Unlocked\n🔄 Tweaked by @blatants\n\nKo-Fi ☕️ | Crypto 👾 | IPAs 📥",
+      "iconURL": "https://is1-ssl.mzstatic.com/image/thumb/Purple211/v4/34/f6/5c/34f65ca4-a064-deac-6726-7ca6bc05d999/sketchar-0-0-1x_U007epad-0-1-0-0-sRGB-85-220.png/512x512bb.jpg",
+      "versions": [
+        {
+          "version": "10.3",
+          "date": "2025-12-26T19:30:12Z",
+          "size": 196118589,
+          "downloadURL": "https://github.com/ftrepoxyz/FTRepo/releases/download/latest/Sketchar_AR_Drawing_App_v10_3_Subscription_Unlocked_blatant_Patched.ipa",
+          "buildVersion": "10.3"
+        }
+      ],
+      "appPermissions": {}
+    }
+  ],
   "news": []
 }
