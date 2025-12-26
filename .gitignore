@@ -1,0 +1,9 @@
+downloads/
+*.session
+*.session-journal
+__pycache__/
+*.py[cod]
+*$py.class
+.env
+tracked_apps.json
+source_tracking.json

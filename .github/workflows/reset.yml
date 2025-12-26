@@ -1,0 +1,185 @@
+name: Reset Repository
+
+on:
+  workflow_dispatch:
+
+jobs:
+  reset:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v3
+        with:
+          fetch-depth: 0
+          token: ${{ secrets.GITH_TOKEN }}
+
+      - name: Delete all release assets
+        env:
+          GITH_TOKEN: ${{ secrets.GITH_TOKEN }}
+        run: |
+          echo "========================================"
+          echo "DELETING ALL RELEASE ASSETS"
+          echo "========================================"
+
+          # Get repository info from git remote
+          REMOTE_URL=$(git config --get remote.origin.url)
+          echo "Remote URL: $REMOTE_URL"
+
+          # Parse owner and repo from URL
+          if [[ $REMOTE_URL =~ https://([^/]+)/([^/]+)/([^/]+) ]]; then
+            BASE_URL="https://${BASH_REMATCH[1]}"
+            OWNER="${BASH_REMATCH[2]}"
+            REPO="${BASH_REMATCH[3]%.git}"
+          elif [[ $REMOTE_URL =~ git@([^:]+):([^/]+)/([^/]+) ]]; then
+            BASE_URL="https://${BASH_REMATCH[1]}"
+            OWNER="${BASH_REMATCH[2]}"
+            REPO="${BASH_REMATCH[3]%.git}"
+          else
+            echo "Error: Could not parse remote URL"
+            exit 1
+          fi
+
+          GITHUB_API_URL="https://api.github.com"
+          echo "API URL: $GITHUB_API_URL"
+          echo "Owner: $OWNER"
+          echo "Repo: $REPO"
+
+          # Get the 'latest' release
+          echo ""
+          echo "Fetching 'latest' release..."
+          RELEASE_JSON=$(curl -s -H "Authorization: token $GITH_TOKEN" \
+            "${GITHUB_API_URL}/repos/${OWNER}/${REPO}/releases/tags/latest")
+
+          RELEASE_ID=$(echo "$RELEASE_JSON" | grep -o '"id":[0-9]*' | head -1 | grep -o '[0-9]*')
+
+          if [ -z "$RELEASE_ID" ]; then
+            echo "No 'latest' release found. Nothing to delete."
+          else
+            echo "Release ID: $RELEASE_ID"
+
+            # Get all assets
+            echo ""
+            echo "Fetching all assets from release..."
+            ASSETS_JSON=$(curl -s -H "Authorization: token $GITH_TOKEN" \
+              "${GITHUB_API_URL}/repos/${OWNER}/${REPO}/releases/${RELEASE_ID}/assets")
+
+            # Count assets
+            ASSET_COUNT=$(echo "$ASSETS_JSON" | grep -o '"id":[0-9]*' | wc -l || echo "0")
+            echo "Found $ASSET_COUNT assets to delete"
+
+            if [ "$ASSET_COUNT" -gt 0 ]; then
+              # Delete each asset
+              echo "$ASSETS_JSON" | grep -o '"id":[0-9]*' | grep -o '[0-9]*' | while read ASSET_ID; do
+                if [ -n "$ASSET_ID" ]; then
+                  echo "  Deleting asset ID: $ASSET_ID"
+                  curl -s -X DELETE \
+                    -H "Authorization: token $GITH_TOKEN" \
+                    "${GITHUB_API_URL}/repos/${OWNER}/${REPO}/releases/${RELEASE_ID}/assets/${ASSET_ID}"
+                fi
+              done
+              echo ""
+              echo "All assets deleted successfully!"
+            else
+              echo "No assets found in release."
+            fi
+          fi
+
+          echo ""
+          echo "========================================"
+          echo "RELEASE ASSETS CLEANUP COMPLETE"
+          echo "========================================"
+
+      - name: Reset apps.json
+        run: |
+          echo ""
+          echo "========================================"
+          echo "RESETTING APPS.JSON"
+          echo "========================================"
+
+          # Create empty repository structure
+          cat > apps.json << 'EOF'
+          {
+            "name": "FTRepo",
+            "identifier": "xyz.ftrepo",
+            "apps": []
+          }
+          EOF
+
+          echo "Created empty apps.json:"
+          cat apps.json
+          echo ""
+          echo "========================================"
+          echo "APPS.JSON RESET COMPLETE"
+          echo "========================================"
+
+      - name: Clear source tracking
+        run: |
+          echo ""
+          echo "========================================"
+          echo "CLEARING SOURCE TRACKING"
+          echo "========================================"
+
+          if [ -f "source_tracking.json" ]; then
+            echo "{}" > source_tracking.json
+            echo "Cleared source_tracking.json"
+          else
+            echo "No source_tracking.json found (this is fine)"
+          fi
+
+          echo "========================================"
+          echo "SOURCE TRACKING CLEARED"
+          echo "========================================"
+
+      - name: Clear downloads directory
+        run: |
+          echo ""
+          echo "========================================"
+          echo "CLEARING DOWNLOADS DIRECTORY"
+          echo "========================================"
+
+          if [ -d "downloads" ]; then
+            rm -rf downloads/*
+            echo "Cleared downloads directory"
+            ls -la downloads/ || echo "Downloads directory is now empty"
+          else
+            echo "No downloads directory found (this is fine)"
+          fi
+
+          echo "========================================"
+          echo "DOWNLOADS CLEARED"
+          echo "========================================"
+
+      - name: Commit and push changes
+        run: |
+          echo ""
+          echo "========================================"
+          echo "COMMITTING CHANGES"
+          echo "========================================"
+
+          git config --local user.email "github-actions@github.local"
+          git config --local user.name "GitHub Actions"
+
+          git add apps.json
+          git add source_tracking.json 2>/dev/null || true
+
+          if git diff --staged --quiet; then
+            echo "No changes to commit"
+          else
+            git commit -m "chore: Reset repository - clear all apps and releases [skip ci]"
+            git push
+            echo "Changes pushed successfully!"
+          fi
+
+          echo "========================================"
+          echo "RESET COMPLETE"
+          echo "========================================"
+          echo ""
+          echo "Summary:"
+          echo "  ✓ All release assets deleted"
+          echo "  ✓ apps.json reset to empty"
+          echo "  ✓ source_tracking.json cleared"
+          echo "  ✓ downloads directory cleared"
+          echo "  ✓ Changes committed and pushed"
+          echo ""
+          echo "Your repository has been reset successfully!"
