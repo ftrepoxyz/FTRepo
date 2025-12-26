@@ -1029,15 +1029,14 @@ async def get_forum_topics_safe(client, entity):
         try:
             from telethon.tl.functions.channels import GetForumTopicsRequest
         except ImportError:
-            # GetForumTopicsRequest not available in this Telethon version
-            print(f"  [FORUM] Forum topics not supported in this Telethon version")
-            return []
+            # GetForumTopicsRequest not available - return None to signal fallback to regular messages
+            return None
 
         result = await client(GetForumTopicsRequest(channel=entity, offset_date=0, offset_id=0, offset_topic=0, limit=100))
         return result.topics if hasattr(result, 'topics') else []
     except Exception as e:
         print(f"  Error getting forum topics: {e}")
-        return []
+        return None
 
 async def download_ipas():
     print("=" * 60)
@@ -1143,15 +1142,27 @@ async def download_ipas():
             if hasattr(entity, 'forum') and entity.forum:
                 print(f"[FORUM] Channel is a forum, searching for IPA topics...")
                 topics = await get_forum_topics_safe(client, entity)
+
+                # If topics couldn't be fetched, fall back to scanning main channel
+                if topics is None:
+                    print(f"[FORUM] Forum topics not available, scanning main channel instead...")
+                    topics = []
+
                 print(f"[FORUM] Found {len(topics)} topics total")
 
-                ipa_topics = []
-                for topic in topics:
-                    topic_title = topic.title.lower() if hasattr(topic, 'title') else ''
-                    topic_title_original = topic.title if hasattr(topic, 'title') else ''
-                    if 'ipa' in topic_title or '👀' in topic_title_original or '📁' in topic_title_original:
-                        ipa_topics.append(topic)
-                        print(f"[TOPIC] Found IPA topic: {topic.title}")
+                if len(topics) == 0:
+                    # No topics found (or not available), scan main channel
+                    print(f"[FORUM] Scanning main channel for IPAs...")
+                    await scrape_channel_or_topic(client, entity, downloaded_files, name, release_assets, source_metadata, existing_apps_dict)
+                else:
+                    # Process each IPA topic
+                    ipa_topics = []
+                    for topic in topics:
+                        topic_title = topic.title.lower() if hasattr(topic, 'title') else ''
+                        topic_title_original = topic.title if hasattr(topic, 'title') else ''
+                        if 'ipa' in topic_title or '👀' in topic_title_original or '📁' in topic_title_original:
+                            ipa_topics.append(topic)
+                            print(f"[TOPIC] Found IPA topic: {topic.title}")
 
                 print(f"[FORUM] Processing {len(ipa_topics)} IPA topics...")
 
