@@ -3,6 +3,74 @@
   "identifier": "xyz.ftrepo",
   "apps": [
     {
+      "name": "MobileScanner",
+      "bundleIdentifier": "com.glority.everlens",
+      "developerName": "@blatants",
+      "localizedDescription": "from @blatants |\n----------------\n📱 Mobile Scanner App - Scan PDF\n\n🆔 Bundle ID: com.glority.everlens\n⬆️ Updated to: 2.22.0\n🔧 Minimum iOS: 15.0\n✅ Patched\n💎 Modifier: Subscription Unlocked\n🔄 Tweaked by @blatants\n\nKo-Fi ☕️ | Crypto 👾 | IPAs 📥",
+      "iconURL": "https://is1-ssl.mzstatic.com/image/thumb/Purple211/v4/22/e3/92/22e39204-3688-3189-53f0-ef13d56e5d06/AppIcon-0-0-1x_U007emarketing-0-7-0-85-220.png/512x512bb.jpg",
+      "versions": [
+        {
+          "version": "2.22.0",
+          "date": "2025-12-26T23:54:40Z",
+          "size": 71444872,
+          "downloadURL": "https://github.com/ftrepoxyz/FTRepo/releases/download/latest/Mobile_Scanner_App_Scan_PDF_v2_22_0_Subscription_Unlocked_blatant.ipa",
+          "buildVersion": "2.22.0"
+        }
+      ],
+      "appPermissions": {}
+    },
+    {
+      "name": "咔皮Action",
+      "bundleIdentifier": "com.future.kapi",
+      "developerName": "@blatants",
+      "localizedDescription": "from @blatants |\n----------------\n📱 Kapi Cam - Y2K & CCD Camera\n\n🆔 Bundle ID: com.future.kapi\n⬆️ Updated to: 3.31.1\n🔧 Minimum iOS: 12.0\n✅ Patched\n💎 Modifier: Subscription Unlocked\n🔄 Tweaked by @blatants\n\n📝 Note:\nJust close the purchase pages if you see any and restart the app.\n\nKo-Fi ☕️ | Crypto 👾 | IPAs 📥",
+      "iconURL": "https://is1-ssl.mzstatic.com/image/thumb/Purple211/v4/20/23/da/2023da70-830c-46d9-d7f2-d1e866002529/AppIcon-0-0-1x_U007emarketing-0-11-0-0-85-220.png/512x512bb.jpg",
+      "versions": [
+        {
+          "version": "3.31.1",
+          "date": "2025-12-26T23:54:48Z",
+          "size": 172256788,
+          "downloadURL": "https://github.com/ftrepoxyz/FTRepo/releases/download/latest/Kapi_Cam_Y2K_%26_CCD_Camera_v3_31_1_Subscription_Unlocked_blatant.ipa",
+          "buildVersion": "3.31.1"
+        }
+      ],
+      "appPermissions": {}
+    },
+    {
+      "name": "StressWatch",
+      "bundleIdentifier": "com.ideation.Stress",
+      "developerName": "@blatants",
+      "localizedDescription": "from @blatants |\n----------------\n📱 StressWatch: AI Stress Monitor\n\n🆔 Bundle ID: com.ideation.Stress\n⬆️ Updated to: 2.4.16\n🔧 Minimum iOS: 15.0\n✅ Patched\n💎 Modifier: Subscription Unlocked\n🔄 Tweaked by @blatants\n\n📝 Note:\nIgnore purchase page.\n\nKo-Fi ☕️ | Crypto 👾 | IPAs 📥",
+      "iconURL": "https://is1-ssl.mzstatic.com/image/thumb/Purple211/v4/fb/2c/8d/fb2c8d42-fa2a-2c9e-fa79-2d3843dba664/AppIcon-0-0-1x_U007ephone-0-1-0-0-85-220.png/512x512bb.jpg",
+      "versions": [
+        {
+          "version": "2.4.16",
+          "date": "2025-12-26T23:54:56Z",
+          "size": 233920629,
+          "downloadURL": "https://github.com/ftrepoxyz/FTRepo/releases/download/latest/StressWatch_AI_Stress_Monitor_v2_4_16_Subscription_Unlocked_blatant.ipa",
+          "buildVersion": "2.4.16"
+        }
+      ],
+      "appPermissions": {}
+    },
+    {
+      "name": "Sketchar",
+      "bundleIdentifier": "tech.sketchar.ios",
+      "developerName": "@blatants",
+      "localizedDescription": "from @blatants |\n----------------\n📱 Sketchar: AR Drawing App\n\n🆔 Bundle ID: tech.sketchar.ios\n⬆️ Updated to: 10.3\n🔧 Minimum iOS: 16.0\n✅ Patched\n💎 Modifier: Subscription Unlocked\n🔄 Tweaked by blatant\n\nKo-Fi ☕️ | Crypto 👾 | IPAs 📥",
+      "iconURL": "https://is1-ssl.mzstatic.com/image/thumb/Purple211/v4/34/f6/5c/34f65ca4-a064-deac-6726-7ca6bc05d999/sketchar-0-0-1x_U007epad-0-1-0-0-sRGB-85-220.png/512x512bb.jpg",
+      "versions": [
+        {
+          "version": "10.3",
+          "date": "2025-12-26T23:55:07Z",
+          "size": 196118589,
+          "downloadURL": "https://github.com/ftrepoxyz/FTRepo/releases/download/latest/Sketchar_AR_Drawing_App_v10_3_Subscription_Unlocked_blatant_Patched.ipa",
+          "buildVersion": "10.3"
+        }
+      ],
+      "appPermissions": {}
+    },
+    {
       "name": "Coin ID: Coin Value Identifier",
       "bundleIdentifier": "com.aiby.wtcoin",
       "developerName": "@blatants",
