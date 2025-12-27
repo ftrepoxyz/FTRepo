@@ -3,6 +3,26 @@
   "identifier": "xyz.ftrepo",
   "apps": [
     {
+      "name": "Clarity: CBT Self Help Journal",
+      "bundleIdentifier": "com.moodtools.thoughtdiary",
+      "developerName": "@blatants",
+      "iconURL": "https://is1-ssl.mzstatic.com/image/thumb/Purple221/v4/76/da/8b/76da8ba6-24ea-3df8-2165-426199f5bf26/AppIcon-0-0-1x_U007epad-0-1-0-sRGB-85-220.png/512x512bb.jpg",
+      "localizedDescription": "from @blatants |\n----------------\n📱 Clarity: CBT Self Help Journal\n\n🆔 Bundle ID: com.moodtools.thoughtdiary\n⬆️ Updated to: 5.5.12\n🔧 Minimum iOS: 16.0\n✅ Patched\n💎 Modifier: Pro Unlocked\n🔄 Tweaked by blatant\n\nKo-Fi ☕️ | Crypto 👾 | IPAs 📥",
+      "versions": [
+        {
+          "version": "5.5.12",
+          "date": "2025-12-27T07:45:58Z",
+          "size": 149393886,
+          "downloadURL": "https://github.com/ftrepoxyz/FTRepo/releases/download/latest/Clarity_CBT_Self_Help_Journal_v5_5_12_Pro_Unlocked_blatant_Patched.ipa"
+        }
+      ],
+      "appPermissions": {},
+      "version": "5.5.12",
+      "versionDate": "2025-12-27T07:45:58Z",
+      "size": 149393886,
+      "downloadURL": "https://github.com/ftrepoxyz/FTRepo/releases/download/latest/Clarity_CBT_Self_Help_Journal_v5_5_12_Pro_Unlocked_blatant_Patched.ipa"
+    },
+    {
       "name": "MacroFactor - Macro Tracker",
       "bundleIdentifier": "com.sbs.diet",
       "developerName": "@blatants",
