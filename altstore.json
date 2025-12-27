@@ -3,6 +3,244 @@
   "identifier": "xyz.ftrepo",
   "apps": [
     {
+      "name": "MacroFactor - Macro Tracker",
+      "bundleIdentifier": "com.sbs.diet",
+      "developerName": "@blatants",
+      "localizedDescription": "from @blatants |\n----------------\n📱 MacroFactor - Macro Tracker\n\n🆔 Bundle ID: com.sbs.diet\n⬆️ Updated to: 5.7.2\n🔧 Minimum iOS: 15.5\n✅ Patched\n💎 Modifier: Subscription Unlocked\n🔄 Tweaked by @blatants\n\nKo-Fi ☕️ | Crypto 👾 | IPAs 📥",
+      "iconURL": "https://is1-ssl.mzstatic.com/image/thumb/Purple211/v4/9d/b4/8a/9db48a27-414d-7730-4a56-767c66df8572/MacroFactorAppIcon-0-0-1x_U007epad-0-1-0-P3-85-220.png/512x512bb.jpg",
+      "versions": [
+        {
+          "version": "5.7.2",
+          "date": "2025-12-27T01:15:54Z",
+          "size": 89478720,
+          "downloadURL": "https://github.com/ftrepoxyz/FTRepo/releases/download/latest/MacroFactor_Macro_Tracker_v5_7_2_Subscription_Unlocked_blatant_Patched.ipa",
+          "buildVersion": "5.7.2"
+        }
+      ],
+      "appPermissions": {}
+    },
+    {
+      "name": "CuteWeather",
+      "bundleIdentifier": "at.stefanstangl.CuteWeather",
+      "developerName": "@blatants",
+      "localizedDescription": "from @blatants |\n----------------\n📱 CuteWeather: weather widget\n\n🆔 Bundle ID: at.stefanstangl.CuteWeather\n⬆️ Updated to: 5.2.30\n🔧 Minimum iOS: 15.0\n✅ Patched\n💎 Modifier: Subscription Unlocked\n🔄 Tweaked by @blatants\n\n📝 Note:\nRestart the app if subscription isn't unlocked\n\nKo-Fi ☕️ | Crypto 👾 | IPAs 📥",
+      "iconURL": "https://is1-ssl.mzstatic.com/image/thumb/Purple221/v4/95/d6/1a/95d61abb-b2de-562c-5410-d36e37d87c69/AppIcon-0-0-1x_U007emarketing-0-11-0-85-220.png/512x512bb.jpg",
+      "versions": [
+        {
+          "version": "5.2.30",
+          "date": "2025-12-27T01:16:06Z",
+          "size": 541192545,
+          "downloadURL": "https://github.com/ftrepoxyz/FTRepo/releases/download/latest/CuteWeather_weather_widget_v5_2_30_Subscription_Unlocked_blatant.ipa",
+          "buildVersion": "5.2.30"
+        }
+      ],
+      "appPermissions": {}
+    },
+    {
+      "name": "FitnessOnline",
+      "bundleIdentifier": "com.aiti.FitnessOnline",
+      "developerName": "@blatants",
+      "localizedDescription": "from @blatants |\n----------------\n📱 Fitness App: Gym Workout Plan\n\n🆔 Bundle ID: com.aiti.FitnessOnline\n⬆️ Updated to: 1.12.1\n🔧 Minimum iOS: 13.0\n✅ Patched\n💎 Modifier: Subscription Unlocked\n🔄 Tweaked by blatants\n\nKo-Fi ☕️ | Crypto 👾 | IPAs 📥",
+      "iconURL": "https://is1-ssl.mzstatic.com/image/thumb/Purple211/v4/ff/75/a1/ff75a18a-c804-0776-7dcb-d924aee1b0af/AppIcon-0-0-1x_U007emarketing-0-5-85-220.png/512x512bb.jpg",
+      "versions": [
+        {
+          "version": "1.12.1",
+          "date": "2025-12-27T01:16:14Z",
+          "size": 103699565,
+          "downloadURL": "https://github.com/ftrepoxyz/FTRepo/releases/download/latest/Fitness_App_Gym_Workout_Plan_v1_12_1_Subscription_Unlocked_blatant.ipa",
+          "buildVersion": "1.12.1"
+        }
+      ],
+      "appPermissions": {}
+    },
+    {
+      "name": "BlackHole",
+      "bundleIdentifier": "com.progmore.blackhole-splitter",
+      "developerName": "@binnichtaktivsipas",
+      "localizedDescription": "from @binnichtaktivsipas |\n--------------------------",
+      "iconURL": "https://is1-ssl.mzstatic.com/image/thumb/Purple211/v4/c6/9f/0d/c69f0d95-2014-abdc-7534-b3cb7a61ad50/AppIcon-0-0-1x_U007emarketing-0-11-0-85-220.png/512x512bb.jpg",
+      "versions": [
+        {
+          "version": "15",
+          "date": "2025-12-27T01:16:15Z",
+          "size": 12375527,
+          "downloadURL": "https://github.com/ftrepoxyz/FTRepo/releases/download/latest/BlackHole_15_1766722385.ipa",
+          "buildVersion": "15"
+        }
+      ],
+      "appPermissions": {}
+    },
+    {
+      "name": "KineMaster",
+      "bundleIdentifier": "com.kinemaster.kios",
+      "developerName": "@blatants",
+      "localizedDescription": "from @blatants |\n----------------\n📱 KineMaster - Video Editor\n\n🆔 Bundle ID: com.kinemaster.kios\n⬆️ Updated to: 8.0.12\n🔧 Minimum iOS: 17.6\n✅ Patched\n💎 Modifier: Pro Unlocked\n🔄 Tweaked by @blatants\n\n📝 Note:\n>Login to activate subscription and ignore \"Get Premium\" banner.\n\nKo-Fi ☕️ | Crypto 👾 | IPAs 📥",
+      "iconURL": "https://is1-ssl.mzstatic.com/image/thumb/Purple211/v4/07/3b/b3/073bb349-8f0d-461b-9854-6898eed1733e/AppIcon-0-0-1x_U007epad-0-1-0-85-220.png/512x512bb.jpg",
+      "versions": [
+        {
+          "version": "8.0.12",
+          "date": "2025-12-27T01:16:20Z",
+          "size": 116352033,
+          "downloadURL": "https://github.com/ftrepoxyz/FTRepo/releases/download/latest/KineMaster_Video_Editor_v8_0_12_Pro_Unlocked_blatant_Patched.ipa",
+          "buildVersion": "8.0.12"
+        }
+      ],
+      "appPermissions": {}
+    },
+    {
+      "name": "UpNote",
+      "bundleIdentifier": "com.getupnote.ios",
+      "developerName": "@blatants",
+      "localizedDescription": "from @blatants |\n----------------\n📱 UpNote - notes, diary, journal\n\n🆔 Bundle ID: com.getupnote.ios\n⬆️ Updated to: 9.16.1\n🔧 Minimum iOS: 14.5\n✅ Patched\n💎 Modifier: Subscription Unlocked\n🔄 Tweaked by @blatants\n\n📝 Note:\n>Restart the app if subscription is not active.\n\nKo-Fi ☕️ | Crypto 👾 | IPAs 📥",
+      "iconURL": "https://is1-ssl.mzstatic.com/image/thumb/Purple211/v4/82/94/7d/82947de5-b498-8e4a-1718-98a816a29cc3/AppIcon-0-0-1x_U007epad-0-1-0-sRGB-85-220.png/512x512bb.jpg",
+      "versions": [
+        {
+          "version": "9.16.1",
+          "date": "2025-12-27T01:16:23Z",
+          "size": 55194535,
+          "downloadURL": "https://github.com/ftrepoxyz/FTRepo/releases/download/latest/UpNote_notes,_diary,_journal_v9_16_1_Subscription_Unlocked_blatant.ipa",
+          "buildVersion": "9.16.1"
+        }
+      ],
+      "appPermissions": {}
+    },
+    {
+      "name": "Gentler Streak Workout Tracker",
+      "bundleIdentifier": "app.gentler.activity",
+      "developerName": "@blatants",
+      "localizedDescription": "from @blatants |\n----------------\n📱 Gentler Streak Workout Tracker\n\n🆔 Bundle ID: app.gentler.activity\n⬆️ Updated to: 5.11\n🔧 Minimum iOS: 16.0\n✅ Patched\n💎 Modifier: Subscription Unlocked\n🔄 Tweaked by blatants\n\nKo-Fi ☕️ | Crypto 👾 | IPAs 📥",
+      "iconURL": "https://is1-ssl.mzstatic.com/image/thumb/Purple211/v4/ea/de/6d/eade6dc1-41df-28bf-c6b4-10657ef4cdac/AppIcon-0-0-1x_U007epad-0-0-0-1-0-0-sRGB-0-85-220.png/512x512bb.jpg",
+      "versions": [
+        {
+          "version": "5.11",
+          "date": "2025-12-27T01:16:32Z",
+          "size": 190183830,
+          "downloadURL": "https://github.com/ftrepoxyz/FTRepo/releases/download/latest/Gentler_Streak_Workout_Tracker_v5_11_Subscription_Unlocked_blatant.ipa",
+          "buildVersion": "5.11"
+        }
+      ],
+      "appPermissions": {}
+    },
+    {
+      "name": "Stepz",
+      "bundleIdentifier": "com.visualhype.pedometer",
+      "developerName": "@blatants",
+      "localizedDescription": "from @blatants |\n----------------\n📱 Stepz - Step Counter & Tracker\n\n🆔 Bundle ID: com.visualhype.pedometer\n⬆️ Updated to: 4.10.34\n🔧 Minimum iOS: 15.5\n✅ Patched\n💎 Modifier: Subscription Unlocked\n🔄 Tweaked by blatants\n\n📝 Note:\nRestart app if Subscriptions isn't activated.\n\nKo-Fi ☕️ | Crypto 👾 | IPAs 📥",
+      "iconURL": "https://is1-ssl.mzstatic.com/image/thumb/Purple221/v4/bf/99/48/bf994897-13a1-5d0d-4840-f6c54e627ce2/AppIcon-0-0-1x_U007ephone-0-1-0-sRGB-85-220.png/512x512bb.jpg",
+      "versions": [
+        {
+          "version": "4.10.34",
+          "date": "2025-12-27T01:16:35Z",
+          "size": 26322715,
+          "downloadURL": "https://github.com/ftrepoxyz/FTRepo/releases/download/latest/Stepz_Step_Counter_%26_Tracker_v4_10_34_Subscription_Unlocked_blatant.ipa",
+          "buildVersion": "4.10.34"
+        }
+      ],
+      "appPermissions": {}
+    },
+    {
+      "name": "InShot - Video Editor",
+      "bundleIdentifier": "com.camerasideas.InstaShot",
+      "developerName": "@blatants",
+      "localizedDescription": "from @blatants |\n----------------\n📱 InShot - Video Editor\n\n🆔 Bundle ID: com.camerasideas.InstaShot\n⬆️ Updated to: 1.92.2\n🔧 Minimum iOS: 15.0\n✅ Patched\n💎 Modifier: Premium Unlocked\n🔄 Tweaked by @blatants\n\nKo-Fi ☕️ | Crypto 👾 | IPAs 📥",
+      "iconURL": "https://is1-ssl.mzstatic.com/image/thumb/Purple211/v4/f2/84/a0/f284a0a7-b480-c631-dda1-2de63c2c6bb1/AppIcon-0-0-1x_U007epad-0-1-0-sRGB-85-220.png/512x512bb.jpg",
+      "versions": [
+        {
+          "version": "1.92.2",
+          "date": "2025-12-27T01:16:39Z",
+          "size": 125616163,
+          "downloadURL": "https://github.com/ftrepoxyz/FTRepo/releases/download/latest/InShot_Video_Editor_v1_92_2_Premium_Unlocked_blatant_Patched.ipa",
+          "buildVersion": "1.92.2"
+        }
+      ],
+      "appPermissions": {}
+    },
+    {
+      "name": "Rest",
+      "bundleIdentifier": "com.evolve.helm",
+      "developerName": "@blatants",
+      "localizedDescription": "from @blatants |\n----------------\n📱 Rest: Fix Your Sleep For Good\n\n🆔 Bundle ID: com.evolve.helm\n⬆️ Updated to: 3.168.0\n🔧 Minimum iOS: 15.0\n✅ Patched\n💎 Modifier: Subscription Unlocked\n🔄 Tweaked by @blatants\n\nKo-Fi ☕️ | Crypto 👾 | IPAs 📥",
+      "iconURL": "https://is1-ssl.mzstatic.com/image/thumb/Purple221/v4/de/05/86/de05868a-16a8-d82b-e6d5-5b0f0a6e1571/AppIcon-0-0-1x_U007emarketing-0-6-0-85-220.png/512x512bb.jpg",
+      "versions": [
+        {
+          "version": "3.168.0",
+          "date": "2025-12-27T01:16:46Z",
+          "size": 150549051,
+          "downloadURL": "https://github.com/ftrepoxyz/FTRepo/releases/download/latest/Rest_Fix_Your_Sleep_For_Good_v3_168_0_Subscription_Unlocked_blatant.ipa",
+          "buildVersion": "3.168.0"
+        }
+      ],
+      "appPermissions": {}
+    },
+    {
+      "name": "Mojo",
+      "bundleIdentifier": "archery.storify",
+      "developerName": "@blatants",
+      "localizedDescription": "from @blatants |\n----------------\n📱 Mojo: AI Video & Reels Editor\n\n🆔 Bundle ID: archery.storify\n⬆️ Updated to: 1.253.1\n🔧 Minimum iOS: 16.0\n✅ Patched\n💎 Modifier: Subscription Unlocked\n🔄 Tweaked by @blatants\n\nKo-Fi ☕️ | Crypto 👾 | IPAs 📥",
+      "iconURL": "https://is1-ssl.mzstatic.com/image/thumb/Purple221/v4/36/54/ff/3654ff0f-0f36-6a6e-ea65-ffd8a086012f/AppIcon-AppStore-0-1x_U007emarketing-0-8-0-85-220-0.png/512x512bb.jpg",
+      "versions": [
+        {
+          "version": "1.253.1",
+          "date": "2025-12-27T01:16:52Z",
+          "size": 197021491,
+          "downloadURL": "https://github.com/ftrepoxyz/FTRepo/releases/download/latest/Mojo_AI_Video_%26_Reels_Editor_v1_253_1_Subscription_Unlocked_blatant.ipa",
+          "buildVersion": "1.253.1"
+        }
+      ],
+      "appPermissions": {}
+    },
+    {
+      "name": "AI Marvels",
+      "bundleIdentifier": "com.hitpaw.photoenhancer",
+      "developerName": "@blatants",
+      "localizedDescription": "from @blatants |\n----------------\n📱 AI Marvels - AI Photo Editor\n\n🆔 Bundle ID: com.hitpaw.photoenhancer\n⬆️ Updated to: 1.94.0\n🔧 Minimum iOS: 15.0\n✅ Patched\n💎 Modifier: Unlimited Credits\n🔄 Tweaked by @blatants\n\n📝 Note:\nUnlimited Credits just click \"Buy\" and \"Cancel\"\n\nKo-Fi ☕️ | Crypto 👾 | IPAs 📥",
+      "iconURL": "https://is1-ssl.mzstatic.com/image/thumb/Purple211/v4/8a/51/0f/8a510fbf-b9b4-ecaa-d431-b115c5bb0397/AppIcon-0-0-1x_U007epad-0-1-0-85-220.png/512x512bb.jpg",
+      "versions": [
+        {
+          "version": "1.94.0",
+          "date": "2025-12-27T01:16:58Z",
+          "size": 165089354,
+          "downloadURL": "https://github.com/ftrepoxyz/FTRepo/releases/download/latest/AI_Marvels_AI_Photo_Editor_v1_94_0_Unlimited_Credits_blatant_Patched.ipa",
+          "buildVersion": "1.94.0"
+        }
+      ],
+      "appPermissions": {}
+    },
+    {
+      "name": "Fitness AI Gym Workout Planner",
+      "bundleIdentifier": "com.jakemor.firness-ai",
+      "developerName": "@blatants",
+      "localizedDescription": "from @blatants |\n----------------\n📱 Fitness AI Gym Workout Planner\n\n🆔 Bundle ID: com.jakemor.firness-ai\n⬆️ Updated to: 15.0.1\n🔧 Minimum iOS: 16.4\n✅ Patched\n💎 Modifier: Subscription Unlocked\n🔄 Tweaked by @blatants\n\nKo-Fi ☕️ | Crypto 👾 | IPAs 📥",
+      "iconURL": "https://is1-ssl.mzstatic.com/image/thumb/Purple211/v4/94/d4/01/94d40121-2ab4-d981-a044-7a52887e01d6/AppIcon-0-0-1x_U007ephone-0-1-0-sRGB-85-220.png/512x512bb.jpg",
+      "versions": [
+        {
+          "version": "15.0.1",
+          "date": "2025-12-27T01:17:03Z",
+          "size": 139275113,
+          "downloadURL": "https://github.com/ftrepoxyz/FTRepo/releases/download/latest/Fitness_AI_Gym_Workout_Planner_v15_0_1_Subscription_Unlocked_blatant.ipa",
+          "buildVersion": "15.0.1"
+        }
+      ],
+      "appPermissions": {}
+    },
+    {
+      "name": "Moonly",
+      "bundleIdentifier": "com.moonly.Moonly",
+      "developerName": "@blatants",
+      "localizedDescription": "from @blatants |\n----------------\n📱 Moonly: Moon Phases & Calendar\n\n🆔 Bundle ID: com.moonly.Moonly\n⬆️ Updated to: 2.6.0\n🔧 Minimum iOS: 16.0\n✅ Patched\n💎 Modifier: Pro Unlocked\n🔄 Tweaked by blatants\n\n📝 Note:\nClick \"Restore Purchases\".\n\nKo-Fi ☕️ | Crypto 👾 | IPAs 📥",
+      "iconURL": "https://is1-ssl.mzstatic.com/image/thumb/Purple211/v4/61/a7/c8/61a7c85d-f876-052f-131d-c83fc41a8a27/AppIcon-0-0-1x_U007ephone-0-1-0-85-220.png/512x512bb.jpg",
+      "versions": [
+        {
+          "version": "2.6.0",
+          "date": "2025-12-27T01:17:09Z",
+          "size": 168508463,
+          "downloadURL": "https://github.com/ftrepoxyz/FTRepo/releases/download/latest/Moonly_Moon_Phases_%26_Calendar_v2_6_0_Pro_Unlocked_blatant_Patched.ipa",
+          "buildVersion": "2.6.0"
+        }
+      ],
+      "appPermissions": {}
+    },
+    {
       "name": "MobileScanner",
       "bundleIdentifier": "com.glority.everlens",
       "developerName": "@blatants",
@@ -15,23 +253,6 @@
           "size": 71444872,
           "downloadURL": "https://github.com/ftrepoxyz/FTRepo/releases/download/latest/Mobile_Scanner_App_Scan_PDF_v2_22_0_Subscription_Unlocked_blatant.ipa",
           "buildVersion": "2.22.0"
-        }
-      ],
-      "appPermissions": {}
-    },
-    {
-      "name": "咔皮Action",
-      "bundleIdentifier": "com.future.kapi",
-      "developerName": "@blatants",
-      "localizedDescription": "from @blatants |\n----------------\n📱 Kapi Cam - Y2K & CCD Camera\n\n🆔 Bundle ID: com.future.kapi\n⬆️ Updated to: 3.31.1\n🔧 Minimum iOS: 12.0\n✅ Patched\n💎 Modifier: Subscription Unlocked\n🔄 Tweaked by @blatants\n\n📝 Note:\nJust close the purchase pages if you see any and restart the app.\n\nKo-Fi ☕️ | Crypto 👾 | IPAs 📥",
-      "iconURL": "https://is1-ssl.mzstatic.com/image/thumb/Purple211/v4/20/23/da/2023da70-830c-46d9-d7f2-d1e866002529/AppIcon-0-0-1x_U007emarketing-0-11-0-0-85-220.png/512x512bb.jpg",
-      "versions": [
-        {
-          "version": "3.31.1",
-          "date": "2025-12-26T23:54:48Z",
-          "size": 172256788,
-          "downloadURL": "https://github.com/ftrepoxyz/FTRepo/releases/download/latest/Kapi_Cam_Y2K_%26_CCD_Camera_v3_31_1_Subscription_Unlocked_blatant.ipa",
-          "buildVersion": "3.31.1"
         }
       ],
       "appPermissions": {}
