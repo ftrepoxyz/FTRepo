@@ -3,18 +3,137 @@
   "identifier": "xyz.ftrepo",
   "apps": [
     {
-      "name": "Clarity: CBT Self Help Journal",
-      "bundleIdentifier": "com.moodtools.thoughtdiary",
+      "name": "Instagram (IGFormat)",
+      "bundleIdentifier": "com.burbn.instagram.igformat",
       "developerName": "@blatants",
-      "localizedDescription": "from @blatants |\n----------------\n📱 Clarity: CBT Self Help Journal\n\n🆔 Bundle ID: com.moodtools.thoughtdiary\n⬆️ Updated to: 5.5.12\n🔧 Minimum iOS: 16.0\n✅ Patched\n💎 Modifier: Pro Unlocked\n🔄 Tweaked by blatant\n\nKo-Fi ☕️ | Crypto 👾 | IPAs 📥",
-      "iconURL": "https://is1-ssl.mzstatic.com/image/thumb/Purple221/v4/76/da/8b/76da8ba6-24ea-3df8-2165-426199f5bf26/AppIcon-0-0-1x_U007epad-0-1-0-sRGB-85-220.png/512x512bb.jpg",
+      "localizedDescription": "from @blatants |\n----------------\n📱 Instagram\n\n🆔 Bundle ID: com.burbn.instagram\n⬆️ Updated to: 410.1.0\n🔧 Minimum iOS: 15.1\n✅ Patched\n💎 Modifier: IGFormat v1.93 + IGHDMedia v1.1\n🔄 Tweaked by @blatants\n\n📝 Note:\nTweak by DENS0R Showcase\n\nChangelog:\nIGFormat V1.93\n\n- Custom name color & font  : give them colors and don’t forget to choose something special for her\n- Story Timestamp Display : Shows elapsed time (5h 23m) for stories and exact date (2024/12/18) for highlights\n\nKo-Fi ☕️ | Crypto 👾 | IPAs 📥",
+      "iconURL": "https://is1-ssl.mzstatic.com/image/thumb/Purple221/v4/d0/bb/32/d0bb325d-2d18-6be0-5d72-3f55b571ce50/Prod-0-0-1x_U007epad-0-1-0-sRGB-85-220.png/512x512bb.jpg",
       "versions": [
         {
-          "version": "5.5.12",
-          "date": "2025-12-27T07:45:58Z",
-          "size": 149393886,
-          "downloadURL": "https://github.com/ftrepoxyz/FTRepo/releases/download/latest/Clarity_CBT_Self_Help_Journal_v5_5_12_Pro_Unlocked_blatant_Patched.ipa",
-          "buildVersion": "5.5.12"
+          "version": "410.1.0",
+          "date": "2025-12-27T13:52:04Z",
+          "size": 245872265,
+          "downloadURL": "https://github.com/ftrepoxyz/FTRepo/releases/download/latest/Instagram_v410_1_0_IGFormat_v1_93_+_IGHDMedia_v1_1_blatant_Patched.ipa",
+          "buildVersion": "410.1.0"
+        }
+      ],
+      "appPermissions": {}
+    },
+    {
+      "name": "RISE: Sleep Tracker",
+      "bundleIdentifier": "com.risesci.nyx",
+      "developerName": "@blatants",
+      "localizedDescription": "from @blatants |\n----------------\n📱 RISE: Sleep Tracker\n\n🆔 Bundle ID: com.risesci.nyx\n⬆️ Updated to: 1.556.0\n🔧 Minimum iOS: 15.1\n✅ Patched\n💎 Modifier: Subscription Unlocked\n🔄 Tweaked by @blatants\n\n📝 Note:\n>Certificate with healthkit entitlement is required.\n\nKo-Fi ☕️ | Crypto 👾 | IPAs 📥",
+      "iconURL": "https://is1-ssl.mzstatic.com/image/thumb/Purple221/v4/6a/4f/64/6a4f641d-ab24-ae6e-e94c-65606b93db55/App-Icon-Glass-0-0-1x_U007epad-0-1-0-85-220.png/512x512bb.jpg",
+      "versions": [
+        {
+          "version": "1.556.0",
+          "date": "2025-12-27T13:52:14Z",
+          "size": 136567030,
+          "downloadURL": "https://github.com/ftrepoxyz/FTRepo/releases/download/latest/RISE_Sleep_Tracker_v1_556_0_Subscription_Unlocked_blatant_Patched.ipa",
+          "buildVersion": "1.556.0"
+        }
+      ],
+      "appPermissions": {}
+    },
+    {
+      "name": "Reddit",
+      "bundleIdentifier": "com.reddit.Reddit",
+      "developerName": "@ftrepo_xyz",
+      "localizedDescription": "from @ftrepo_xyz |\n------------------\nRedditDeluxe 2025.39.0\n- Reddit 2025.39.0\n- RedditFilter \n- RedditUndoScrollUp\n- redditColorComments\n- OledKeyboard\n- Patch already included\n\nMade by @Jacks_Apps\nApp decrypted by @eeveedecrypterbot",
+      "iconURL": "https://is1-ssl.mzstatic.com/image/thumb/Purple211/v4/f3/d3/a8/f3d3a8f1-f729-2d3a-edf4-d9a9e63596f3/AppIcon-0-0-1x_U007epad-0-1-0-85-220.png/512x512bb.jpg",
+      "versions": [
+        {
+          "version": "2025.39.0",
+          "date": "2025-12-27T13:52:21Z",
+          "size": 140549088,
+          "downloadURL": "https://github.com/ftrepoxyz/FTRepo/releases/download/latest/RedditDeluxe_2025_39.0_Jacks_Apps.ipa",
+          "buildVersion": "2025.39.0"
+        }
+      ],
+      "appPermissions": {}
+    },
+    {
+      "name": "Coloring Book",
+      "bundleIdentifier": "com.impalastudios.drawingcoloringbook",
+      "developerName": "@blatants",
+      "localizedDescription": "from @blatants |\n----------------\n📱 Coloring Book∘ Color Party\n\n🆔 Bundle ID: com.impalastudios.drawingcoloringbook\n⬆️ Updated to: 1.5.5\n🔧 Minimum iOS: 17.0\n✅ Patched\n💎 Modifier: Subscription Unlocked\n🔄 Tweaked by @blatants\n\n📝 Note:\nIgnore purchase popup's and restart the app if subscription isn't active.\n\nKo-Fi ☕️ | Crypto 👾 | IPAs 📥",
+      "iconURL": "https://is1-ssl.mzstatic.com/image/thumb/Purple211/v4/68/9e/18/689e18b8-52bc-30c8-a28d-1b0f84eae9ae/AppIcon-0-0-1x_U007emarketing-0-8-0-0-85-220.png/512x512bb.jpg",
+      "versions": [
+        {
+          "version": "1.5.5",
+          "date": "2025-12-27T13:52:27Z",
+          "size": 159440940,
+          "downloadURL": "https://github.com/ftrepoxyz/FTRepo/releases/download/latest/Coloring_Book∘_Color_Party_v1_5_5_Subscription_Unlocked_blatant.ipa",
+          "buildVersion": "1.5.5"
+        }
+      ],
+      "appPermissions": {}
+    },
+    {
+      "name": "iTranslate Translator",
+      "bundleIdentifier": "com.outerspaceapps.itranslate",
+      "developerName": "@blatants",
+      "localizedDescription": "from @blatants |\n----------------\n📱 iTranslate Translator\n\n🆔 Bundle ID: com.outerspaceapps.itranslate\n⬆️ Updated to: 17.4.65\n🔧 Minimum iOS: 14.0\n✅ Patched\n💎 Modifier: Subscription Unlocked\n🔄 Tweaked by blatants\n\nKo-Fi ☕️ | Crypto 👾 | IPAs 📥",
+      "iconURL": "https://is1-ssl.mzstatic.com/image/thumb/Purple211/v4/76/04/30/76043022-de8e-44ab-f1c6-cdc81294bc3a/AppIcon-0-0-1x_U007emarketing-0-8-0-85-220.png/512x512bb.jpg",
+      "versions": [
+        {
+          "version": "17.4.65",
+          "date": "2025-12-27T13:52:33Z",
+          "size": 72795577,
+          "downloadURL": "https://github.com/ftrepoxyz/FTRepo/releases/download/latest/iTranslate_Translator_v17_4_65_Subscription_Unlocked_blatant_Patched.ipa",
+          "buildVersion": "17.4.65"
+        }
+      ],
+      "appPermissions": {}
+    },
+    {
+      "name": "Detail",
+      "bundleIdentifier": "co.detail.duo",
+      "developerName": "@blatants",
+      "localizedDescription": "from @blatants |\n----------------\n📱 Detail: AI Video Editor\n\n🆔 Bundle ID: co.detail.duo\n⬆️ Updated to: 5.5.1\n🔧 Minimum iOS: 16.0\n✅ Patched\n💎 Modifier: Subscription Unlocked\n🔄 Tweaked by @blatants\n\n📝 Note:\nIgnore/close \"Failed to create AI Edits\" your vid will be ready just close this popup.\n\nKo-Fi ☕️ | Crypto 👾 | IPAs 📥",
+      "iconURL": "https://is1-ssl.mzstatic.com/image/thumb/Purple221/v4/b9/ea/62/b9ea6254-9849-2f41-3db6-481761125008/AppIcon-0-1x_U007epad-0-1-0-85-220-0.png/512x512bb.jpg",
+      "versions": [
+        {
+          "version": "5.5.1",
+          "date": "2025-12-27T13:52:38Z",
+          "size": 154549596,
+          "downloadURL": "https://github.com/ftrepoxyz/FTRepo/releases/download/latest/Detail_AI_Video_Editor_v5_5_1_Subscription_Unlocked_blatant_Patched.ipa",
+          "buildVersion": "5.5.1"
+        }
+      ],
+      "appPermissions": {}
+    },
+    {
+      "name": "Peachy",
+      "bundleIdentifier": "com.camerasideas.Peachy",
+      "developerName": "@blatants",
+      "localizedDescription": "from @blatants |\n----------------\n📱 Peachy - AI Face & Body Editor\n\n🆔 Bundle ID: com.camerasideas.Peachy\n⬆️ Updated to: 2.8.1\n🔧 Minimum iOS: 16.1\n✅ Patched\n💎 Modifier: Premium Unlocked\n🔄 Tweaked by @blatants\n\nKo-Fi ☕️ | Crypto 👾 | IPAs 📥",
+      "iconURL": "https://is1-ssl.mzstatic.com/image/thumb/Purple221/v4/85/0c/79/850c79b9-9827-4b5e-9bca-382bddf64314/AppIcon-0-0-1x_U007epad-0-1-0-sRGB-0-85-220.png/512x512bb.jpg",
+      "versions": [
+        {
+          "version": "2.8.1",
+          "date": "2025-12-27T13:52:46Z",
+          "size": 170875174,
+          "downloadURL": "https://github.com/ftrepoxyz/FTRepo/releases/download/latest/Peachy_AI_Face_%26_Body_Editor_v2_8_1_Premium_Unlocked_blatant_Patched.ipa",
+          "buildVersion": "2.8.1"
+        }
+      ],
+      "appPermissions": {}
+    },
+    {
+      "name": "Tripsy",
+      "bundleIdentifier": "app.tripsy.ios",
+      "developerName": "@blatants",
+      "localizedDescription": "from @blatants |\n----------------\n📱 Tripsy – Travel Plans Planner\n\n🆔 Bundle ID: app.tripsy.ios\n⬆️ Updated to: 3.7.3\n🔧 Minimum iOS: 18\n✅ Patched\n💎 Modifier: Lifetime Unlocked\n🔄 Tweaked by @blatants\n\nKo-Fi ☕️ | Crypto 👾 | IPAs 📥",
+      "iconURL": "https://is1-ssl.mzstatic.com/image/thumb/Purple211/v4/2b/21/44/2b214467-14f2-b32e-bc50-208849c19c5b/App_Icon_Original-0-0-1x_U007epad-0-0-0-1-0-0-sRGB-85-220.png/512x512bb.jpg",
+      "versions": [
+        {
+          "version": "3.7.3",
+          "date": "2025-12-27T13:52:52Z",
+          "size": 116549332,
+          "downloadURL": "https://github.com/ftrepoxyz/FTRepo/releases/download/latest/Tripsy_–_Travel_Plans_Planner_v3_7_3_Lifetime_Unlocked_blatant_Patched.ipa",
+          "buildVersion": "3.7.3"
         }
       ],
       "appPermissions": {}
