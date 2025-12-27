@@ -88,23 +88,6 @@
       "appPermissions": {}
     },
     {
-      "name": "UpNote",
-      "bundleIdentifier": "com.getupnote.ios",
-      "developerName": "@blatants",
-      "localizedDescription": "from @blatants |\n----------------\n📱 UpNote - notes, diary, journal\n\n🆔 Bundle ID: com.getupnote.ios\n⬆️ Updated to: 9.16.1\n🔧 Minimum iOS: 14.5\n✅ Patched\n💎 Modifier: Subscription Unlocked\n🔄 Tweaked by @blatants\n\n📝 Note:\n>Restart the app if subscription is not active.\n\nKo-Fi ☕️ | Crypto 👾 | IPAs 📥",
-      "iconURL": "https://is1-ssl.mzstatic.com/image/thumb/Purple211/v4/82/94/7d/82947de5-b498-8e4a-1718-98a816a29cc3/AppIcon-0-0-1x_U007epad-0-1-0-sRGB-85-220.png/512x512bb.jpg",
-      "versions": [
-        {
-          "version": "9.16.1",
-          "date": "2025-12-27T01:16:23Z",
-          "size": 55194535,
-          "downloadURL": "https://github.com/ftrepoxyz/FTRepo/releases/download/latest/UpNote_notes,_diary,_journal_v9_16_1_Subscription_Unlocked_blatant.ipa",
-          "buildVersion": "9.16.1"
-        }
-      ],
-      "appPermissions": {}
-    },
-    {
       "name": "Gentler Streak Workout Tracker",
       "bundleIdentifier": "app.gentler.activity",
       "developerName": "@blatants",
@@ -117,23 +100,6 @@
           "size": 190183830,
           "downloadURL": "https://github.com/ftrepoxyz/FTRepo/releases/download/latest/Gentler_Streak_Workout_Tracker_v5_11_Subscription_Unlocked_blatant.ipa",
           "buildVersion": "5.11"
-        }
-      ],
-      "appPermissions": {}
-    },
-    {
-      "name": "Stepz",
-      "bundleIdentifier": "com.visualhype.pedometer",
-      "developerName": "@blatants",
-      "localizedDescription": "from @blatants |\n----------------\n📱 Stepz - Step Counter & Tracker\n\n🆔 Bundle ID: com.visualhype.pedometer\n⬆️ Updated to: 4.10.34\n🔧 Minimum iOS: 15.5\n✅ Patched\n💎 Modifier: Subscription Unlocked\n🔄 Tweaked by blatants\n\n📝 Note:\nRestart app if Subscriptions isn't activated.\n\nKo-Fi ☕️ | Crypto 👾 | IPAs 📥",
-      "iconURL": "https://is1-ssl.mzstatic.com/image/thumb/Purple221/v4/bf/99/48/bf994897-13a1-5d0d-4840-f6c54e627ce2/AppIcon-0-0-1x_U007ephone-0-1-0-sRGB-85-220.png/512x512bb.jpg",
-      "versions": [
-        {
-          "version": "4.10.34",
-          "date": "2025-12-27T01:16:35Z",
-          "size": 26322715,
-          "downloadURL": "https://github.com/ftrepoxyz/FTRepo/releases/download/latest/Stepz_Step_Counter_%26_Tracker_v4_10_34_Subscription_Unlocked_blatant.ipa",
-          "buildVersion": "4.10.34"
         }
       ],
       "appPermissions": {}
@@ -173,23 +139,6 @@
       "appPermissions": {}
     },
     {
-      "name": "Mojo",
-      "bundleIdentifier": "archery.storify",
-      "developerName": "@blatants",
-      "localizedDescription": "from @blatants |\n----------------\n📱 Mojo: AI Video & Reels Editor\n\n🆔 Bundle ID: archery.storify\n⬆️ Updated to: 1.253.1\n🔧 Minimum iOS: 16.0\n✅ Patched\n💎 Modifier: Subscription Unlocked\n🔄 Tweaked by @blatants\n\nKo-Fi ☕️ | Crypto 👾 | IPAs 📥",
-      "iconURL": "https://is1-ssl.mzstatic.com/image/thumb/Purple221/v4/36/54/ff/3654ff0f-0f36-6a6e-ea65-ffd8a086012f/AppIcon-AppStore-0-1x_U007emarketing-0-8-0-85-220-0.png/512x512bb.jpg",
-      "versions": [
-        {
-          "version": "1.253.1",
-          "date": "2025-12-27T01:16:52Z",
-          "size": 197021491,
-          "downloadURL": "https://github.com/ftrepoxyz/FTRepo/releases/download/latest/Mojo_AI_Video_%26_Reels_Editor_v1_253_1_Subscription_Unlocked_blatant.ipa",
-          "buildVersion": "1.253.1"
-        }
-      ],
-      "appPermissions": {}
-    },
-    {
       "name": "AI Marvels",
       "bundleIdentifier": "com.hitpaw.photoenhancer",
       "developerName": "@blatants",
@@ -219,23 +168,6 @@
           "size": 139275113,
           "downloadURL": "https://github.com/ftrepoxyz/FTRepo/releases/download/latest/Fitness_AI_Gym_Workout_Planner_v15_0_1_Subscription_Unlocked_blatant.ipa",
           "buildVersion": "15.0.1"
-        }
-      ],
-      "appPermissions": {}
-    },
-    {
-      "name": "Moonly",
-      "bundleIdentifier": "com.moonly.Moonly",
-      "developerName": "@blatants",
-      "localizedDescription": "from @blatants |\n----------------\n📱 Moonly: Moon Phases & Calendar\n\n🆔 Bundle ID: com.moonly.Moonly\n⬆️ Updated to: 2.6.0\n🔧 Minimum iOS: 16.0\n✅ Patched\n💎 Modifier: Pro Unlocked\n🔄 Tweaked by blatants\n\n📝 Note:\nClick \"Restore Purchases\".\n\nKo-Fi ☕️ | Crypto 👾 | IPAs 📥",
-      "iconURL": "https://is1-ssl.mzstatic.com/image/thumb/Purple211/v4/61/a7/c8/61a7c85d-f876-052f-131d-c83fc41a8a27/AppIcon-0-0-1x_U007ephone-0-1-0-85-220.png/512x512bb.jpg",
-      "versions": [
-        {
-          "version": "2.6.0",
-          "date": "2025-12-27T01:17:09Z",
-          "size": 168508463,
-          "downloadURL": "https://github.com/ftrepoxyz/FTRepo/releases/download/latest/Moonly_Moon_Phases_%26_Calendar_v2_6_0_Pro_Unlocked_blatant_Patched.ipa",
-          "buildVersion": "2.6.0"
         }
       ],
       "appPermissions": {}
